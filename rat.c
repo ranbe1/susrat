@@ -16,7 +16,7 @@ list_modules(void) {
     write(1, "\n", 1);
 
     for (i = 0;i < _modules_size;++i) {
-        mod = modules[ _modules_size - 1 ];
+        mod = modules[ _modules_size - i ];
 
         write(1, "\t", 1);
         write(1, mod->name, strlen(mod->name));
