@@ -4,7 +4,7 @@
 
 *Susrat* is made of a server which is installed on the "victim's" computer and a client which sends command to the server and control its operation.
 
-Feautures:
+Features:
 
 * dynamic loading of modules
 * keylogging
