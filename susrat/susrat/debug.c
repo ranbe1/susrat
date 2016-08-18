@@ -1,5 +1,7 @@
 #include "debug.h"
 
+DebugLevel debug_level = DEBUG_VERBOSE;
+
 void
 debug(char *message, DebugLevel type) {
 	int pipe;

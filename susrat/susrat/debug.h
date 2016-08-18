@@ -17,6 +17,6 @@ typedef enum {
 	DEBUG_INFO = 8
 } DebugLevel;
 
-DebugLevel debug_level = DEBUG_VERBOSE;
+extern DebugLevel debug_level;
 
 #endif

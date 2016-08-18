@@ -1,5 +1,7 @@
 #include "mod.h"
 
+int _modules_size = 0;
+
 Module *
 create_module() {
 	Module *module = malloc(sizeof(Module));

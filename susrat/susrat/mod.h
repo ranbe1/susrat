@@ -36,6 +36,6 @@ typedef struct {
 #endif
 
 Module *modules[NUM_MODULES];
-int _modules_size = 0;
+extern int _modules_size;
 
 #endif
