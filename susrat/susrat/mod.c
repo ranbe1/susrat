@@ -1,24 +1,4 @@
-#include <string.h>
-#include <dlfcn.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <sys/types.h>
-#include <unistd.h>
-#include <signal.h>
-
-#include "debug.c"
-
-#define NUM_MODULES 20
-#define LABEL_SIZE 256
-#define PATH_SIZE 500
-
-typedef struct {
-	char name[LABEL_SIZE];
-	pid_t pid;
-} Module;
-
-Module *modules[NUM_MODULES];
-int _modules_size = 0;
+#include "mod.h"
 
 Module *
 create_module() {
@@ -37,6 +17,7 @@ create_module() {
 
 Module *
 load_module(char *mod_name, char *mod_path) {
+#ifdef linux
 	Module *module = create_module();
 
 	pid_t pid = fork();
@@ -63,6 +44,33 @@ load_module(char *mod_name, char *mod_path) {
 	(void)(*mod_init)();
 
 	return NULL;
+#endif
+
+#ifdef _WIN32
+
+	HINSTANCE hDLL;
+	void* (*mod_init)() = NULL;
+	Module *module;
+
+	module = create_module();
+	hDLL = LoadLibrary("%s\\%s.dll", mod_path, mod_name);
+
+	if (hDLL == NULL)
+	{
+		fprintf(stderr, "Can't load module \"%s\"\n", mod_name);
+	}
+
+	module->hDLL = hDLL;
+	memset(module->name, 0, LABEL_SIZE);
+	strncpy(module->name, mod_name, strlen(mod_name));
+
+	*(void **)(&mod_init) = GetProcAddress(hDLL, "mod_init");
+	(void)(*mod_init)();
+
+	return 0;
+
+#endif
+
 }
 
 void
@@ -72,11 +80,22 @@ clean_modules(void) {
 	debug("Killing all modules", DEBUG_VERBOSE);
 	char message[1024];
 	Module *mod = modules[_modules_size - 1];
+#ifdef  linux
 	do {
 		snprintf(message, sizeof(message), "Stopping module %s (pid: %d)", mod->name, mod->pid);
 		debug(message, DEBUG_VERBOSE);
 		kill(mod->pid, SIGKILL);
 		free(mod);
-	} while (--_modules_size);
+	} while (--mod);
+#endif
+#ifdef _WIN32
+	//do {
+	//	snprintf(message, sizeof(message), "Stopping module %s (pid: %d)", mod->name, mod->hDLL);
+	//	debug(message, DEBUG_VERBOSE);
+	//	kill(mod->hDLL, 2);
+	//	free(mod);
+	//} while (--mod);
+#endif
 
 }
+

@@ -1,20 +1,4 @@
-#ifndef H_RAT_DEBUG
-#define H_RAT_DEBUG
-
-#include <stdio.h>
-#include <unistd.h>
-#include <string.h>
-
-#define MAX_DEBUG_MESSAGE 1024
-
-typedef enum {
-	DEBUG_VERBOSE = 1,
-	DEBUG_ERROR = 2,
-	DEBUG_WARNING = 4,
-	DEBUG_INFO = 8
-} DebugLevel;
-
-DebugLevel debug_level = DEBUG_VERBOSE;
+#include "debug.h"
 
 void
 debug(char *message, DebugLevel type) {
@@ -46,4 +30,4 @@ debug(char *message, DebugLevel type) {
 	snprintf(buffer, message_size, "%s: %s\n", message_type, message);
 	write(pipe, buffer, message_size);
 }
-#endif
+

