@@ -43,7 +43,7 @@ load_module(char *mod_name, char *mod_path) {
 	*(void **)(&mod_init) = GetProcAddress(hDLL, "mod_init");
 	(void)(*mod_init)();
 
-	return 0;
+	return NULL;
 
 #endif
 
