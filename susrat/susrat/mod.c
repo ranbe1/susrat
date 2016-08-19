@@ -1,3 +1,5 @@
+#ifndef SUSRAT_MOD
+#define SUSRAT_MOD
 #include "mod.h"
 
 int _modules_size = 0;
@@ -100,3 +102,4 @@ clean_modules(void) {
 	} while (--_modules_size);
 }
 
+#endif

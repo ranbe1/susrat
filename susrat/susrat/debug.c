@@ -1,3 +1,5 @@
+#ifndef SUSRAT_DEBUG
+#define SUSRAT_DEBUG
 #include "debug.h"
 
 DebugLevel debug_level = DEBUG_VERBOSE;
@@ -33,3 +35,4 @@ debug(char *message, DebugLevel type) {
 	write(pipe, buffer, message_size);
 }
 
+#endif

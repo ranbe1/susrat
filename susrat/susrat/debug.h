@@ -1,5 +1,5 @@
-#ifndef H_RAT_DEBUG
-#define H_RAT_DEBUG
+#ifndef H_SUSRAT_DEBUG
+#define H_SUSRAT_DEBUG
 
 #include <stdio.h>
 #include <string.h>

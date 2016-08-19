@@ -1,3 +1,5 @@
+#ifndef SUSRAT_RAT
+#define SUSRAT_RAT
 #include "rat.h"
 
 void
@@ -29,7 +31,7 @@ load_all_modules(char *mods[], char *mod_path) {
 int main(void) {
 
 #ifdef _WIN32
-	char *mod_path = "C:\\Users\\User\\";
+	char *mod_path = "C:/Users/חופשי/Source/Repos/susrat/modules/KeyLogger/Debug/";
 #else
 #ifdef linux
 	char *mod_path = "/home/venus/projects/rat/modules/";
@@ -57,3 +59,4 @@ int main(void) {
 
 	return 0;
 }
+#endif

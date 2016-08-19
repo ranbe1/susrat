@@ -1,5 +1,5 @@
-#ifndef _RAT_
-#define _RAT_
+#ifndef H_SUSRAT_RAT
+#define H_SUSRAT_RAT
 
 #ifdef linux
 #include <dlfcn.h>

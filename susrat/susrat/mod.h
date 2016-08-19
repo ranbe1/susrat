@@ -1,5 +1,5 @@
-#ifndef  _MOD_
-#define _MOD_
+#ifndef H_SUSRAT_MOD
+#define H_SUSRAT_MOD
 
 #include <string.h>
 #include <stdlib.h>
