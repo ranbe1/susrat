@@ -21,26 +21,26 @@ Module *
 load_module(char *mod_name, char *mod_path) {
 #ifdef _WIN32
 
-	HINSTANCE hDLL;
+	HINSTANCE process;
 	void* (*mod_init)() = NULL;
 	Module *module;
 	char fullpath[PATH_SIZE];
 
 	module = create_module();
 	snprintf(fullpath, sizeof(fullpath), "%s%s.dll", mod_path, mod_name);
-	hDLL = LoadLibraryA(fullpath);
+	process = LoadLibraryA(fullpath);
 
-	if (hDLL == NULL)
+	if (process == NULL)
 	{
 		fprintf(stderr, "Can't load module \"%s\"\n", mod_name);
 		exit(1);
 	}
 
-	module->hDLL = hDLL;
+	module->process = process;
 	memset(module->name, 0, LABEL_SIZE);
 	strncpy(module->name, mod_name, strlen(mod_name));
 
-	*(void **)(&mod_init) = GetProcAddress(hDLL, "mod_init");
+	*(void **)(&mod_init) = GetProcAddress(process, "mod_init");
 	(void)(*mod_init)();
 
 	return NULL;
@@ -50,9 +50,9 @@ load_module(char *mod_name, char *mod_path) {
 #ifdef linux
 	Module *module = create_module();
 
-	pid_t pid = fork();
-	if (pid != 0) {
-		module->pid = pid;
+	pid_t process = fork();
+	if (process != 0) {
+		module->process = process;
 		memset(module->name, 0, LABEL_SIZE);
 		strncpy(module->name, mod_name, strlen(mod_name));
 		return module;
@@ -84,26 +84,19 @@ clean_modules(void) {
 
 	debug("Killing all modules", DEBUG_VERBOSE);
 	char message[1024];
-	Module *mod = modules[_modules_size - 1];
-#ifdef  linux
+	Module *mod;
 	do {
-		snprintf(message, sizeof(message), "Stopping module %s (pid: %d)", mod->name, mod->pid);
+		mod = modules[_modules_size - 1];
+		snprintf(message, sizeof(message), "Stopping module %s (process: %d)", mod->name, mod->process);
 		debug(message, DEBUG_VERBOSE);
-		kill(mod->pid, SIGKILL);
-		free(mod);
-		mod->hDLL = NULL;
-		strcpy(mod->name, NULL);
-	} while (--mod);
-#endif 
+#ifdef linux
+		kill(mod->process, SIGKILL);
+#else
 #ifdef _WIN32
-	do {
-		snprintf(message, sizeof(message), "Stopping module %s (pid: %d)", mod->name, mod->hDLL);
-		debug(message, DEBUG_VERBOSE);
-		FreeLibrary(mod->hDLL);
-		free(mod);
-		mod->hDLL = NULL;
-		strcpy(mod->name, NULL);
-	} while (--mod);
+		FreeLibrary(mod->process);
 #endif
+#endif
+		free(mod);
+	} while (--_modules_size);
 }
 
