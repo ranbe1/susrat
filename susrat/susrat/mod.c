@@ -45,8 +45,7 @@ load_module(char *mod_name, char *mod_path) {
 
 	return NULL;
 
-#endif
-
+#else
 #ifdef linux
 	Module *module = create_module();
 
@@ -75,6 +74,7 @@ load_module(char *mod_name, char *mod_path) {
 
 	return NULL;
 #endif
+#endif
 
 }
 
@@ -89,11 +89,11 @@ clean_modules(void) {
 		mod = modules[_modules_size - 1];
 		snprintf(message, sizeof(message), "Stopping module %s (process: %d)", mod->name, mod->process);
 		debug(message, DEBUG_VERBOSE);
-#ifdef linux
-		kill(mod->process, SIGKILL);
-#else
 #ifdef _WIN32
 		FreeLibrary(mod->process);
+#else
+#ifdef linux
+		kill(mod->process, SIGKILL);
 #endif
 #endif
 		free(mod);
