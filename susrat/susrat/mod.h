@@ -8,12 +8,13 @@
 
 #ifdef _WIN32
 #include <Windows.h>
-#endif
+#else
 #ifdef linux
 #include <sys/types.h>
 #include <unistd.h>
 #include <dlfcn.h>
 #include <signal.h>
+#endif
 #endif
 
 
@@ -27,10 +28,11 @@ typedef struct {
 	char name[LABEL_SIZE];
 #ifdef _WIN32
 	HINSTANCE process;
-#endif
+#else
 #ifdef linux
 	pid_t process;
-#endif 
+#endif
+#endif
 } Module;
 
 

@@ -2,9 +2,7 @@
 #define _RAT_
 
 #ifdef linux
-
 #include <dlfcn.h>
-
 #endif
 
 #include <stdio.h>

