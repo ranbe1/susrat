@@ -31,7 +31,7 @@ void check_date()
 	struct tm tm = *localtime(&t);
 	char date[20];
 
-	snprintf(date, sizeof(log_name), "%d-%d-%d", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday);
+	snprintf(date, sizeof(log_name), "%d-%d-%d.txt", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday);
 
 	if (strcmp(log_name, date) != 0)
 		strcpy(log_name, date);
