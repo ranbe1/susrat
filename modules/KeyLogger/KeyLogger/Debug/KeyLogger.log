@@ -1,0 +1,7 @@
+﻿  KeyLogger.c
+c:\users\חופשי\documents\visual studio 2017\projects\susrat\modules\keylogger\keylogger\keylogger.c(22): warning C4474: 'fprintf' : too many arguments passed for format string
+  c:\users\חופשי\documents\visual studio 2017\projects\susrat\modules\keylogger\keylogger\keylogger.c(22): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\חופשי\documents\visual studio 2017\projects\susrat\modules\keylogger\keylogger\keylogger.c(76): warning C4098: 'mod_init': 'void' function returning a value
+     Creating library C:\Users\חופשי\Documents\Visual Studio 2017\Projects\susrat\modules\KeyLogger\Debug\KeyLogger.lib and object C:\Users\חופשי\Documents\Visual Studio 2017\Projects\susrat\modules\KeyLogger\Debug\KeyLogger.exp
+  KeyLogger.vcxproj -> C:\Users\חופשי\Documents\Visual Studio 2017\Projects\susrat\modules\KeyLogger\Debug\KeyLogger.dll
+  KeyLogger.vcxproj -> C:\Users\חופשי\Documents\Visual Studio 2017\Projects\susrat\modules\KeyLogger\Debug\KeyLogger.pdb (Partial PDB)

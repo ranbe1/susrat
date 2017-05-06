@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #ifndef SUSRAT_DEBUG
 #define SUSRAT_DEBUG
 #include "debug.h"
