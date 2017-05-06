@@ -40,7 +40,6 @@ int main(void) {
 
 	char *mods[] = {
 		"KeyLogger",
-		""
 		NULL
 	};
 
