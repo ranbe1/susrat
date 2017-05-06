@@ -15,7 +15,7 @@ int Save(int *buffer)
 	int i;
 	for (i = 0; i < BUFFSIZE; i++)
 	{
-		fprintf(fptr, "%d ", *buffer)
+		fprintf(fptr, "%d ", *buffer);
 		buffer++;
 	}
 
