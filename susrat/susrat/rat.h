@@ -1,5 +1,7 @@
+#define _CRT_SECURE_NO_WARNINGS
 #ifndef H_SUSRAT_RAT
 #define H_SUSRAT_RAT
+
 
 #ifdef linux
 #include <dlfcn.h>

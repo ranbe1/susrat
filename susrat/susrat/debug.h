@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #ifndef H_SUSRAT_DEBUG
 #define H_SUSRAT_DEBUG
 
