@@ -35,6 +35,7 @@ load_module(char *mod_name, char *mod_path) {
 
 	if (process == NULL)
 	{
+		int d = GetLastError();
 		fprintf(stderr, "Can't load module \"%s\"\n", mod_name);
 		exit(1);
 	}

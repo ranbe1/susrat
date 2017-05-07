@@ -1,7 +1,13 @@
 ﻿  KeyLogger.c
-c:\users\חופשי\documents\visual studio 2017\projects\susrat\modules\keylogger\keylogger\keylogger.c(22): warning C4474: 'fprintf' : too many arguments passed for format string
-  c:\users\חופשי\documents\visual studio 2017\projects\susrat\modules\keylogger\keylogger\keylogger.c(22): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
-c:\users\חופשי\documents\visual studio 2017\projects\susrat\modules\keylogger\keylogger\keylogger.c(76): warning C4098: 'mod_init': 'void' function returning a value
-     Creating library C:\Users\חופשי\Documents\Visual Studio 2017\Projects\susrat\modules\KeyLogger\Debug\KeyLogger.lib and object C:\Users\חופשי\Documents\Visual Studio 2017\Projects\susrat\modules\KeyLogger\Debug\KeyLogger.exp
-  KeyLogger.vcxproj -> C:\Users\חופשי\Documents\Visual Studio 2017\Projects\susrat\modules\KeyLogger\Debug\KeyLogger.dll
-  KeyLogger.vcxproj -> C:\Users\חופשי\Documents\Visual Studio 2017\Projects\susrat\modules\KeyLogger\Debug\KeyLogger.pdb (Partial PDB)
+d:\ran\git projects\modules\keylogger\keylogger\keylogger.c(14): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+d:\ran\git projects\modules\keylogger\keylogger\keylogger.c(22): warning C4474: 'fprintf' : too many arguments passed for format string
+  d:\ran\git projects\modules\keylogger\keylogger\keylogger.c(22): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+d:\ran\git projects\modules\keylogger\keylogger\keylogger.c(31): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\time.h(505): note: see declaration of 'localtime'
+d:\ran\git projects\modules\keylogger\keylogger\keylogger.c(37): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\string.h(136): note: see declaration of 'strcpy'
+d:\ran\git projects\modules\keylogger\keylogger\keylogger.c(76): warning C4098: 'mod_init': 'void' function returning a value
+     Creating library D:\ran\Git Projects\modules\KeyLogger\Debug\KeyLogger.lib and object D:\ran\Git Projects\modules\KeyLogger\Debug\KeyLogger.exp
+  KeyLogger.vcxproj -> D:\ran\Git Projects\modules\KeyLogger\Debug\KeyLogger.dll
+  KeyLogger.vcxproj -> D:\ran\Git Projects\modules\KeyLogger\Debug\KeyLogger.pdb (Partial PDB)

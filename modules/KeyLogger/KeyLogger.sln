@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KeyLogger", "KeyLogger\KeyLogger.vcxproj", "{D997865B-0473-4D6A-81D4-5382E4AAE7BC}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KeyLogger", "KeyLogger\KeyLogger.vcxproj", "{244E675D-5991-4BE5-8F26-0A78C1B22725}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D997865B-0473-4D6A-81D4-5382E4AAE7BC}.Debug|x64.ActiveCfg = Debug|x64
-		{D997865B-0473-4D6A-81D4-5382E4AAE7BC}.Debug|x64.Build.0 = Debug|x64
-		{D997865B-0473-4D6A-81D4-5382E4AAE7BC}.Debug|x86.ActiveCfg = Debug|Win32
-		{D997865B-0473-4D6A-81D4-5382E4AAE7BC}.Debug|x86.Build.0 = Debug|Win32
-		{D997865B-0473-4D6A-81D4-5382E4AAE7BC}.Release|x64.ActiveCfg = Release|x64
-		{D997865B-0473-4D6A-81D4-5382E4AAE7BC}.Release|x64.Build.0 = Release|x64
-		{D997865B-0473-4D6A-81D4-5382E4AAE7BC}.Release|x86.ActiveCfg = Release|Win32
-		{D997865B-0473-4D6A-81D4-5382E4AAE7BC}.Release|x86.Build.0 = Release|Win32
+		{244E675D-5991-4BE5-8F26-0A78C1B22725}.Debug|x64.ActiveCfg = Debug|x64
+		{244E675D-5991-4BE5-8F26-0A78C1B22725}.Debug|x64.Build.0 = Debug|x64
+		{244E675D-5991-4BE5-8F26-0A78C1B22725}.Debug|x86.ActiveCfg = Debug|x64
+		{244E675D-5991-4BE5-8F26-0A78C1B22725}.Debug|x86.Build.0 = Debug|x64
+		{244E675D-5991-4BE5-8F26-0A78C1B22725}.Release|x64.ActiveCfg = Release|x64
+		{244E675D-5991-4BE5-8F26-0A78C1B22725}.Release|x64.Build.0 = Release|x64
+		{244E675D-5991-4BE5-8F26-0A78C1B22725}.Release|x86.ActiveCfg = Release|Win32
+		{244E675D-5991-4BE5-8F26-0A78C1B22725}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

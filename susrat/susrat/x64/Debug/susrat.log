@@ -1,6 +1,6 @@
 ﻿  rat.c
-c:\users\חופשי\documents\visual studio 2017\projects\susrat\susrat\susrat\rat.c(9): warning C4013: 'write' undefined; assuming extern returning int
-c:\users\חופשי\documents\visual studio 2017\projects\susrat\susrat\susrat\rat.c(26): warning C4013: 'load_module' undefined; assuming extern returning int
-c:\users\חופשי\documents\visual studio 2017\projects\susrat\susrat\susrat\rat.c(48): warning C4013: 'clean_modules' undefined; assuming extern returning int
-  susrat.vcxproj -> C:\Users\חופשי\Documents\Visual Studio 2017\Projects\susrat\susrat\x64\Debug\susrat.exe
-  susrat.vcxproj -> C:\Users\חופשי\Documents\Visual Studio 2017\Projects\susrat\susrat\x64\Debug\susrat.pdb (Partial PDB)
+d:\ran\git projects\susrat\susrat\rat.c(9): warning C4013: 'write' undefined; assuming extern returning int
+d:\ran\git projects\susrat\susrat\rat.c(26): warning C4013: 'load_module' undefined; assuming extern returning int
+d:\ran\git projects\susrat\susrat\rat.c(48): warning C4013: 'clean_modules' undefined; assuming extern returning int
+  susrat.vcxproj -> D:\ran\Git Projects\susrat\x64\Debug\susrat.exe
+  susrat.vcxproj -> D:\ran\Git Projects\susrat\x64\Debug\susrat.pdb (Partial PDB)

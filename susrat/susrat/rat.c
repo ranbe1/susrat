@@ -31,7 +31,7 @@ load_all_modules(char *mods[], char *mod_path) {
 int main(void) {
 
 #ifdef _WIN32
-	char *mod_path = "D:/ran/Git Projects/modules/KeyLogger/Debug/";
+	char *mod_path = "D:\\ran\\Git Projects\\modules\\KeyLogger\\x64\\Debug\\";
 #else
 #ifdef linux
 	char *mod_path = "/home/venus/projects/rat/modules/";
